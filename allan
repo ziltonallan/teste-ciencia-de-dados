@@ -1,0 +1,50 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+Titulação = pd.Series(['Doutorado', 'Mestrado', 'Especialização', 'Graduação', 'Cursos
+Técnicos'],index=[20,15,85,145,320])
+
+ df = pd.DataFrame({'Titulação':['Doutorado', 'Mestrado', 'Especialização',
+'Graduação', 'Cursos Técnicos'],'Quantidade':[20,15,85,145,320]})
+
+df = pd.DataFrame({'calorias':[200, 350, 550], 'gordura (%)':[0, 15, 35]},
+index=['banana', 'macarrão', 'cachorro quente'])
+
+v = np.array(range(50)).reshape(2,5,5)
+print('Shape = ', v.shape)
+print('Número de dimensões = ', v.ndim)
+print('Número de elementos = ', v.size)
+print('Tensor v = \n', v)
+
+# Definindo variáveis
+fatias = [8, 12, 10]
+atividades = ['Lazer', 'Estudo', 'Viagem']
+colunas = ['r', 'm', 'y']
+# Criando um gráfico
+plt.pie(fatias, labels = atividades, colors = colunas, startangle = 90, shadow = True,
+explode = (0, 0.1, 0))
+plt.show()
+
+# Definindo variáveis
+x = [1, 3, 5]
+y = [1, 2, 5]
+# Criando um gráfico
+plt.plot(x, y)
+# Atribuindo um título ao gráfico
+plt.title('Exemplo utilizando Plot')
+plt.xlabel('Variavel 1')
+plt.ylabel('Variavel 2')
+# Atribuindo uma legenda
+plt.plot(x, y, label = 'Uma legenda')
+plt.legend()
+# Exibindo o gráfico gerado
+plt.show()
+
+# Definindo variáveis
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+y = [5, 2, 4, 5, 6, 8, 4, 8]
+# Criando um gráfico
+plt.scatter(x, y, label = 'Pontos', color = 'b', marker = '*', s = 100)
+plt.legend()
+plt.show()
